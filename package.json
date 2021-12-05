@@ -42,10 +42,5 @@
       "path": "Samples~/Snapshot Debugger"
     }
   ],
-  "repository": {
-    "url": "https://github.com/Unity-Technologies/com.unity.kinematica.git",
-    "type": "git",
-    "revision": "188714dd91826623583947bb5ae4eb2862fca2e2"
-  },
   "hideInEditor": false
 }

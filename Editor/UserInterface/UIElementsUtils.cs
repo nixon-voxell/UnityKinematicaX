@@ -10,7 +10,7 @@ namespace Unity.Kinematica.UIElements
     {
         static Dictionary<FloatField, Tuple<float, float>> k_FloatFieldRanges = new Dictionary<FloatField, Tuple<float, float>>();
 
-        const string PackagePath = "Packages/com.unity.kinematica/Editor/";
+        const string PackagePath = "Packages/voxell.kinematicax/Editor/";
         const string StylesRoot = PackagePath + "Styles/";
         const string TemplateRoot = PackagePath + "Templates/";
 

@@ -2,6 +2,11 @@
 
 ![Kinematica](./Documentation~/images/kinematica-banner.png)
 
+- [KinematicaX (an extension of Unity's Kinematica)](#kinematicax-an-extension-of-unitys-kinematica)
+  - [Installation](#installation)
+  - [Required Software](#required-software)
+  - [Documentation](#documentation)
+
 KinematicaX is a next-generation character animation system based on [Unity's Kinematica](https://docs.unity3d.com/Packages/com.unity.kinematica@0.8/manual/index.html).
 
 Producing animated characters for video games in an actual production environment is subject to a large number of requirements and demands. Trying to find a solution that doesn’t suffer from the ever-growing complexity of animation graphs while meeting production constraints is a tremendously difficult proposition.
@@ -12,9 +17,14 @@ Kinematica is a tremendously ambitious attempt to provide a solution for charact
 
 This package is still in an experimental stage and we require the help and feedback of the community to verify the ideas and workflows presented here. Even though the intended idea is to replace animation graphs with this system we haven't achieved feature parity yet and none of the ideas here are set in stone. Do not hesitate to let us know what you think - we would love to incoorporate any kind of constructive feedback into this solution.
 
+## Installation
+
+1. Clone this repository into your `Packages` folder.
+2. And you are ready to go!
+
 ## Required Software
 
-Unity 2019.3
+Unity 2020.3
 
 ## Documentation
 
