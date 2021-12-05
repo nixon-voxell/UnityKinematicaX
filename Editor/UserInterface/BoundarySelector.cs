@@ -140,7 +140,7 @@ namespace Unity.Kinematica.Editor
                 Add(selectionArea);
 
                 m_View = new ListView();
-                m_View.itemHeight = 18;
+                m_View.fixedItemHeight = 18;
                 m_View.makeItem = MakeItem;
                 m_View.bindItem = BindItem;
 

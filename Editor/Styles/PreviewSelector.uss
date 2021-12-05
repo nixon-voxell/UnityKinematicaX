@@ -9,13 +9,12 @@
 
 .selectorContainer {
     flex-direction: row;
-    padding-right: 2px;
+    padding-right: 0px;
 }
 
 .selectorDropdown {
-    min-height: 16px;
-    min-width: 18px;
-    border-right-width: : 1px;
+    min-width: 6px;
+    border-right-width: 1px;
     border-left-width: 0px;
     border-top-width: 0px;
     border-bottom-width: 0px;
@@ -25,7 +24,8 @@
 }
 
 .targetContainer {
-    padding-left: 2px;
+    margin-left: 6px;
+    padding-left: 6px;
     flex-direction: row;
 }
 

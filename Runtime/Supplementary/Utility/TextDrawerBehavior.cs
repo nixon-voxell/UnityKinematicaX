@@ -90,7 +90,7 @@ namespace Unity.Kinematica
         internal void Init()
         {
 #if UNITY_EDITOR
-            m_Skin = AssetDatabase.LoadAssetAtPath<GUISkin>("Packages/com.unity.kinematica/Assets/Skins/Text_window_skin.guiskin");
+            m_Skin = AssetDatabase.LoadAssetAtPath<GUISkin>("Packages/voxell.kinematicax/Assets/Skins/Text_window_skin.guiskin");
 #else
             m_Skin = null;
 #endif

@@ -1,7 +1,7 @@
 <UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements"
       xmlns:kinematica="Unity.Kinematica.Editor">
-    <ui:Template path="packages/com.unity.kinematica/Editor/Templates/AssetDirtyWarning.uxml" name="dirtyWarning"/>
-    <ui:Template path="packages/com.unity.kinematica/Editor/Templates/AnimationClipLibrary.uxml" name="AnimationClipLibrary"/>
+    <ui:Template path="Packages/voxell.kinematicax/Editor/Templates/AssetDirtyWarning.uxml" name="dirtyWarning"/>
+    <ui:Template path="Packages/voxell.kinematicax/Editor/Templates/AnimationClipLibrary.uxml" name="AnimationClipLibrary"/>
     <ui:VisualElement name="kinematica">
         <ui:VisualElement name="toolbar" class="toolbarRow">
             <ui:VisualElement name="toolbarAsset">

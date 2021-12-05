@@ -96,7 +96,7 @@ namespace Unity.Kinematica.Editor
             }
 
             m_ListView.AddToClassList("jointList");
-            m_ListView.itemHeight = 16;
+            m_ListView.fixedItemHeight = 16;
             m_ListView.style.minHeight = 16 * m_JointNames.Count + 4;
             m_ListView.itemsSource = m_JointNames;
             m_ListView.makeItem = MakeItem;

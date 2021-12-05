@@ -55,7 +55,7 @@
 }
 
 #timeSliderArea {
-    border-color: : #5E5E5E;
+    border-color: #5E5E5E;
 }
 
 /* Inspector */
