@@ -39,7 +39,7 @@ namespace Unity.Kinematica
         /// </summary>
         public ref T Ref
         {
-            get { return ref UnsafeUtilityEx.AsRef<T>((byte*)ptr); }
+            get { return ref UnsafeUtility.AsRef<T>((byte*)ptr); }
         }
 
         /// <summary>

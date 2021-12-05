@@ -83,7 +83,7 @@ namespace Unity.Kinematica
                 ref binary.Ref).And(value);
         }
 
-        public QueryTraitExpression Where<T>(NativeString64 debugName, T value) where T : struct
+        public QueryTraitExpression Where<T>(FixedString64Bytes debugName, T value) where T : struct
         {
             return
                 QueryTraitExpression.Create(

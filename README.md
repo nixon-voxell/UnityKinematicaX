@@ -1,8 +1,8 @@
-# Kinematica (com.unity.kinematica)
+# KinematicaX (an extension of [Unity's Kinematica](https://docs.unity3d.com/Packages/com.unity.kinematica@0.8/manual/index.html))
 
-![Kinematica](/Documentation~/images/kinematica-banner.png "Kinematica")
+![Kinematica](./Documentation~/images/kinematica-banner.png)
 
-Kinematica is a next-generation character animation system.
+KinematicaX is a next-generation character animation system based on [Unity's Kinematica](https://docs.unity3d.com/Packages/com.unity.kinematica@0.8/manual/index.html).
 
 Producing animated characters for video games in an actual production environment is subject to a large number of requirements and demands. Trying to find a solution that doesn’t suffer from the ever-growing complexity of animation graphs while meeting production constraints is a tremendously difficult proposition.
 

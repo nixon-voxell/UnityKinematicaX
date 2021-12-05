@@ -21,7 +21,7 @@ namespace Unity.Kinematica
         /// <returns>Reference to the element at the index passed as argument.</returns>
         public static ref T At<T>(this NativeArray<T> nativeArray, int index) where T : struct
         {
-            return ref UnsafeUtilityEx.ArrayElementAsRef<T>(
+            return ref UnsafeUtility.ArrayElementAsRef<T>(
                 NativeArrayUnsafeUtility.GetUnsafePtr(nativeArray), index);
         }
 
@@ -30,9 +30,9 @@ namespace Unity.Kinematica
         /// </summary>
         /// <param name="index">Index of the native list element.</param>
         /// <returns>Reference to the element at the index passed as argument.</returns>
-        public static ref T At<T>(this NativeList<T> nativeList, int index) where T : struct
+        public static ref T At<T>(this NativeList<T> nativeList, int index) where T : unmanaged
         {
-            return ref UnsafeUtilityEx.ArrayElementAsRef<T>(
+            return ref UnsafeUtility.ArrayElementAsRef<T>(
                 NativeListUnsafeUtility.GetUnsafePtr(nativeList), index);
         }
 
@@ -43,7 +43,7 @@ namespace Unity.Kinematica
         /// <returns>Reference to the element at the index passed as argument.</returns>
         public static ref T At<T>(this NativeSlice<T> nativeSlice, int index) where T : struct
         {
-            return ref UnsafeUtilityEx.ArrayElementAsRef<T>(
+            return ref UnsafeUtility.ArrayElementAsRef<T>(
                 NativeSliceUnsafeUtility.GetUnsafePtr(nativeSlice), index);
         }
 
@@ -81,7 +81,7 @@ namespace Unity.Kinematica
         /// <summary>
         /// Writes a native list to the binary writer.
         /// </summary>
-        public static unsafe void WriteToStream<T>(this NativeList<T> nativeList, BinaryWriter writer) where T : struct
+        public static unsafe void WriteToStream<T>(this NativeList<T> nativeList, BinaryWriter writer) where T : unmanaged
         {
             int numElements = nativeList.Length;
             writer.Write(numElements);
@@ -102,7 +102,7 @@ namespace Unity.Kinematica
         /// <summary>
         /// Reads a native list from the binary reader.
         /// </summary>
-        public static unsafe void ReadFromStream<T>(this NativeList<T> nativeList, BinaryReader reader) where T : struct
+        public static unsafe void ReadFromStream<T>(this NativeList<T> nativeList, BinaryReader reader) where T : unmanaged
         {
             int numElements = reader.ReadInt32();
             nativeList.ResizeUninitialized(numElements);

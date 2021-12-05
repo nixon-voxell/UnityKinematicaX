@@ -94,7 +94,7 @@ namespace Unity.Curves
 
         public bool IsValid => array != null;
 
-        public ref Keyframe this[int index] => ref UnsafeUtilityEx.ArrayElementAsRef<Keyframe>(array, index);
+        public ref Keyframe this[int index] => ref UnsafeUtility.ArrayElementAsRef<Keyframe>(array, index);
 
         public Curve ToCurve()
         {

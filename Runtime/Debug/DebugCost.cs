@@ -6,7 +6,7 @@ namespace Unity.Kinematica
 {
     internal struct DebugCostRecord : IFrameRecord
     {
-        public NativeString64 queryDebugName;
+        public FixedString64Bytes queryDebugName;
 
         public float poseCost;
 

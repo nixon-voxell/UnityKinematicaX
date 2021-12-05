@@ -94,7 +94,7 @@ namespace Unity.Kinematica
         {
             get
             {
-                return ref UnsafeUtilityEx.ArrayElementAsRef<T>(ptr, index);
+                return ref UnsafeUtility.ArrayElementAsRef<T>(ptr, index);
             }
         }
 

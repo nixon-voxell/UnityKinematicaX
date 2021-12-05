@@ -30,7 +30,7 @@ namespace Unity.Kinematica
         /// <returns>Reference to the payload that corresponds to the index passed as argument.</returns>
         public unsafe ref T GetPayload<T>(int payload) where T : struct
         {
-            return ref UnsafeUtilityEx.AsRef<T>((byte*)payloads.GetUnsafePtr() + payload);
+            return ref UnsafeUtility.AsRef<T>((byte*)payloads.GetUnsafePtr() + payload);
         }
     }
 }

@@ -54,7 +54,7 @@ namespace Unity.Kinematica.Editor
 
         void Refresh()
         {
-            m_ListView.Refresh();
+            m_ListView.Rebuild();
         }
 
         void ToggleListVisibility()
@@ -158,7 +158,7 @@ namespace Unity.Kinematica.Editor
         public void SetInputEnabled(bool enabled)
         {
             m_ForceDisabled = !enabled;
-            EditorApplication.delayCall += m_ListView.Refresh;
+            EditorApplication.delayCall += m_ListView.Rebuild;
         }
     }
 }

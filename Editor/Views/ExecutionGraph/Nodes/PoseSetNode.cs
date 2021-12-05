@@ -14,7 +14,7 @@ namespace Unity.Kinematica.Editor
             {
                 using (PoseSet poseSet = GetDebugObject<PoseSet>())
                 {
-                    if (poseSet.debugName.LengthInBytes > 0)
+                    if (poseSet.debugName.Length > 0)
                     {
                         return $"{poseSet.debugName.ToString()} poses";
                     }

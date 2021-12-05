@@ -89,7 +89,7 @@ namespace Unity.Kinematica
                             trait.payload;
 
                         functionPointer.Invoke(
-                            ref UnsafeUtilityEx.AsRef<Any>(
+                            ref UnsafeUtility.AsRef<Any>(
                                 payloadPtr), ref this);
                     }
                 }

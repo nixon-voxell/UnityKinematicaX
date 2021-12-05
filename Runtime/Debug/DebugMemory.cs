@@ -50,7 +50,7 @@ namespace Unity.Kinematica
             }
         }
 
-        public void AddCostRecord(NativeString64 queryDebugName, float poseCost, float trajectoryCost)
+        public void AddCostRecord(FixedString64Bytes queryDebugName, float poseCost, float trajectoryCost)
         {
             costRecords.Add(new DebugCostRecord()
             {

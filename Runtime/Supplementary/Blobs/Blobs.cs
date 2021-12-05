@@ -41,7 +41,7 @@ namespace Unity.Kinematica
         {
             byte* returnPtr = m_Ptr;
             m_Ptr += UnsafeUtility.SizeOf<T>();
-            return ref UnsafeUtilityEx.AsRef<T>(returnPtr);
+            return ref UnsafeUtility.AsRef<T>(returnPtr);
         }
 
         int Allocate(long size, void* ptrAddr)
@@ -179,7 +179,7 @@ namespace Unity.Kinematica
         {
             get
             {
-                return ref UnsafeUtilityEx.AsRef<T>(m_Ptr);
+                return ref UnsafeUtility.AsRef<T>(m_Ptr);
             }
         }
 
@@ -218,7 +218,7 @@ namespace Unity.Kinematica
             {
                 fixed(int* thisPtr = &m_OffsetPtr)
                 {
-                    return ref UnsafeUtilityEx.AsRef<T>((byte*)thisPtr + m_OffsetPtr);
+                    return ref UnsafeUtility.AsRef<T>((byte*)thisPtr + m_OffsetPtr);
                 }
             }
         }
@@ -258,7 +258,7 @@ namespace Unity.Kinematica
 
                 fixed(int* thisPtr = &m_OffsetPtr)
                 {
-                    return ref UnsafeUtilityEx.ArrayElementAsRef<T>((byte*)thisPtr + m_OffsetPtr, index);
+                    return ref UnsafeUtility.ArrayElementAsRef<T>((byte*)thisPtr + m_OffsetPtr, index);
                 }
             }
         }

@@ -22,7 +22,7 @@ namespace Unity.Kinematica
         public NativeArray<PoseSequence> sequences;
         public Allocator allocator;
 
-        public NativeString64 debugName;
+        public FixedString64Bytes debugName;
 
         public DebugIdentifier debugIdentifier { get; set; }
 
@@ -59,7 +59,7 @@ namespace Unity.Kinematica
         public void ReadFromStream(Buffer buffer)
         {
             sequences = buffer.ReadNativeArray<PoseSequence>(out allocator);
-            debugName = buffer.ReadNativeString64();
+            debugName = buffer.ReadFixedString64Bytes();
         }
     }
 }

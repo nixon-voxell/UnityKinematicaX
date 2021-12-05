@@ -179,7 +179,7 @@ namespace Unity.Kinematica
 
             byte* ptr = (byte*)payloads.GetUnsafePtr() + trait.payload;
 
-            return ref UnsafeUtilityEx.AsRef<T>(ptr);
+            return ref UnsafeUtility.AsRef<T>(ptr);
         }
     }
 }

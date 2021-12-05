@@ -284,11 +284,11 @@ namespace Unity.SnapshotDebugger
             return new Color32(r, g, b, a);
         }
 
-        public static NativeString64 ReadNativeString64(this Buffer buffer)
+        public static FixedString64Bytes ReadFixedString64Bytes(this Buffer buffer)
         {
-            NativeString64 str = new NativeString64();
-            str.LengthInBytes = buffer.ReadBlittable<ushort>();
-            str.buffer = buffer.ReadBlittable<Bytes62>();
+            FixedString64Bytes str = new FixedString64Bytes();
+            str.Length = buffer.ReadBlittable<ushort>();
+            str = buffer.ReadBlittable<FixedString64Bytes>();
 
             return str;
         }
@@ -425,7 +425,7 @@ namespace Unity.SnapshotDebugger
             return array;
         }
 
-        public static NativeList<T> ReadNativeList<T>(this Buffer buffer, out Allocator allocator) where T : struct
+        public static NativeList<T> ReadNativeList<T>(this Buffer buffer, out Allocator allocator) where T : unmanaged
         {
             allocator = (Allocator)buffer.Read32();
             if (allocator == Allocator.Invalid)
@@ -453,7 +453,7 @@ namespace Unity.SnapshotDebugger
         /// <summary>
         /// Reads a native list from the buffer.
         /// </summary>
-        public static unsafe void ReadFromStream<T>(this NativeList<T> nativeList, Buffer buffer) where T : struct
+        public static unsafe void ReadFromStream<T>(this NativeList<T> nativeList, Buffer buffer) where T : unmanaged
         {
             int numElements = buffer.Read32();
             nativeList.ResizeUninitialized(numElements);

@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine.Assertions;
 using Unity.Collections.LowLevel.Unsafe;
@@ -128,7 +127,7 @@ namespace Unity.SnapshotDebugger
                 int size = UnsafeUtility.SizeOf<T>();
                 NativeSlice<byte> bytes = ReadSlice(size);
 
-                val = UnsafeUtilityEx.AsRef<T>((void*)((byte*)bytes.GetUnsafePtr()));
+                val = UnsafeUtility.AsRef<T>((void*)((byte*)bytes.GetUnsafePtr()));
             }
 
             return val;

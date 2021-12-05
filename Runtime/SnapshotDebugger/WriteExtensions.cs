@@ -308,10 +308,10 @@ namespace Unity.SnapshotDebugger
             buffer.Write(value.a);
         }
 
-        public static void Write(this Buffer buffer, NativeString64 value)
+        public static void Write(this Buffer buffer, FixedString64Bytes value)
         {
-            buffer.WriteBlittable(value.LengthInBytes);
-            buffer.WriteBlittable(value.buffer);
+            buffer.WriteBlittable(value.Length);
+            buffer.WriteBlittable(value);
         }
 
         /// <summary>
@@ -441,7 +441,7 @@ namespace Unity.SnapshotDebugger
             buffer.Append(bytes);
         }
 
-        public static void WriteNativeList<T>(this Buffer buffer, NativeList<T> list, Allocator allocator) where T : struct
+        public static void WriteNativeList<T>(this Buffer buffer, NativeList<T> list, Allocator allocator) where T : unmanaged
         {
             buffer.Write((int)allocator);
 
@@ -465,7 +465,7 @@ namespace Unity.SnapshotDebugger
         /// <summary>
         /// Writes a native list to the buffer.
         /// </summary>
-        public static unsafe void WriteToStream<T>(this NativeList<T> nativeList, Buffer buffer) where T : struct
+        public static unsafe void WriteToStream<T>(this NativeList<T> nativeList, Buffer buffer) where T : unmanaged
         {
             int numElements = nativeList.Length;
             buffer.Write(numElements);

@@ -13,7 +13,7 @@ namespace Unity.Kinematica.Editor
         {
             EditorApplication.delayCall += () =>
             {
-                Refresh();
+                Rebuild();
             };
         }
 
@@ -28,7 +28,7 @@ namespace Unity.Kinematica.Editor
         public AnimationClipListView()
         {
             RegisterCallback<AttachToPanelEvent>(OnAttachToPanel);
-            onSelectionChanged += OnAnimationClipSelectionChanged;
+            onSelectionChange += OnAnimationClipSelectionChanged;
         }
 
         void OnAttachToPanel(AttachToPanelEvent evt)
@@ -85,7 +85,7 @@ namespace Unity.Kinematica.Editor
 
         internal List<TaggedAnimationClip> m_ClipSelection = new List<TaggedAnimationClip>();
 
-        void OnAnimationClipSelectionChanged(List<object> animationClips)
+        void OnAnimationClipSelectionChanged(IEnumerable<object> animationClips)
         {
             m_ClipSelection.Clear();
             foreach (var c in animationClips.Cast<TaggedAnimationClip>())
@@ -116,7 +116,7 @@ namespace Unity.Kinematica.Editor
                 if (m_Window.Asset != null)
                 {
                     m_Window.Asset.AddClips(taggedClips);
-                    Refresh();
+                    Rebuild();
                 }
             }
         }
@@ -140,7 +140,7 @@ namespace Unity.Kinematica.Editor
             m_Window.Asset.RemoveClips(m_ClipSelection);
             m_ClipSelection.Clear();
             ClearSelection();
-            Refresh();
+            Rebuild();
             while (currentSelection >= m_Window.Asset.AnimationLibrary.Count)
             {
                 --currentSelection;
@@ -191,7 +191,7 @@ namespace Unity.Kinematica.Editor
                     SelectItem(m_ClipSelection[0]);
                 }
 
-                Refresh();
+                Rebuild();
             }
         }
 

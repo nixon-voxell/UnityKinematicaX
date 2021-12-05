@@ -221,7 +221,7 @@ namespace Unity.Kinematica.Editor
             createButton.clickable.clicked -= CreateButtonClicked;
 
             Selection.selectionChanged -= OnSelectionChanged;
-            m_AnimationLibraryListView.onSelectionChanged -= OnLibrarySelectionChanged;
+            m_AnimationLibraryListView.onSelectionChange -= OnLibrarySelectionChanged;
 
             if (m_Timeline != null)
             {
@@ -362,7 +362,7 @@ namespace Unity.Kinematica.Editor
                 m_AnimationLibraryListView.selectionType = SelectionType.Multiple;
                 m_AnimationLibraryListView.makeItem = MakeAnimationItem;
                 m_AnimationLibraryListView.bindItem = BindAnimationItem;
-                m_AnimationLibraryListView.itemHeight = 18;
+                m_AnimationLibraryListView.fixedItemHeight = 18;
                 UIElementsUtils.ApplyStyleSheet(k_AnimationLibraryStyle, m_ClipAndSettingsInput.Q<VisualElement>("clipsArea"));
 
                 m_Timeline = rootVisualElement.Q<Timeline>("timeline");
@@ -370,7 +370,7 @@ namespace Unity.Kinematica.Editor
                 m_Timeline.GutterTrackAdded += OnGutterTrackCreated;
                 m_Timeline.ForceGutterTrackDisplay += ForceGutterTrackDisplay;
                 m_Timeline.LoadTemplate(rootVisualElement);
-                m_AnimationLibraryListView.onSelectionChanged += OnLibrarySelectionChanged;
+                m_AnimationLibraryListView.onSelectionChange += OnLibrarySelectionChanged;
 
                 m_PreviewToggle = rootVisualElement.Q<ToolbarToggle>("previewToggle");
                 m_PreviewToggle.SetValueWithoutNotify(m_Timeline.PreviewEnabled);
@@ -432,7 +432,7 @@ namespace Unity.Kinematica.Editor
             t.SetDisplay(display);
         }
 
-        void OnLibrarySelectionChanged(List<object> selection)
+        void OnLibrarySelectionChanged(IEnumerable<object> selection)
         {
             OnLibrarySelectionChanged(selection.OfType<TaggedAnimationClip>().ToList());
         }
@@ -747,7 +747,7 @@ namespace Unity.Kinematica.Editor
                 evt.menu.AppendAction("Delete Clip", action =>
                 {
                     m_Asset.RemoveClips(new[] { clip });
-                    m_AnimationLibraryListView.Refresh();
+                    m_AnimationLibraryListView.Rebuild();
                 }, DropdownMenuAction.AlwaysEnabled);
 
                 evt.menu.AppendSeparator();

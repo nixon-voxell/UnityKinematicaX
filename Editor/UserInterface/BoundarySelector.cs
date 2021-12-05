@@ -209,7 +209,7 @@ namespace Unity.Kinematica.Editor
             void Refresh()
             {
                 m_View.itemsSource = FilteredClips;
-                m_View.Refresh();
+                m_View.Rebuild();
             }
 
             void ToggleClip(TaggedAnimationClip clip)
