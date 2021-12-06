@@ -56,7 +56,6 @@ namespace Unity.Kinematica.UIElements
 
         public static void CloneTemplateInto(string templateFilename, VisualElement parent)
         {
-            UnityEngine.Debug.Log(TemplateRoot + templateFilename);
             AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(TemplateRoot + templateFilename).CloneTree(parent);
         }
 

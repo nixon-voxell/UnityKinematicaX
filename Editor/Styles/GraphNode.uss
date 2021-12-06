@@ -1,5 +1,5 @@
 #state.success > #icon {
-    background-image : url("/Packages/com.unity.kinematica/Editor/Icons/status-success.png");
+    background-image : url("/Packages/voxell.kinematicax/Editor/Icons/status-success.png");
     flex-grow: 1;
 	width: 12px;
 	height: 12px;
@@ -8,7 +8,7 @@
 }
 
 #state.failure > #icon {
-    background-image : url("/Packages/com.unity.kinematica/Editor/Icons/status-failure.png");
+    background-image : url("/Packages/voxell.kinematicax/Editor/Icons/status-failure.png");
     flex-grow: 1;
 	width: 12px;
 	height: 12px;

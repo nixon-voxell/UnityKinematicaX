@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <ui:Button name="firstFrame" tooltip="First Frame" class="playControlClickable controlButton" style="background-image: url(&apos;project://database/Packages/voxell.kinematicax/Editor/Images/d_FirstFrame.png?fileID=2800000&amp;guid=577c9bb82d05dcb46902da5111ad6503&amp;type=3#d_FirstFrame&apos;);" />
-    <ui:Button name="previousFrame" tooltip="Previous Frame" class="playControlClickable controlButton" style="background-image: url(&apos;project://database/Packages/voxell.kinematicax/Editor/Images/d_SkipBack.png?fileID=2800000&amp;guid=274af52f4c84c9f44aa7b7cadc3bdf88&amp;type=3#d_SkipBack&apos;);" />
-    <uie:ToolbarToggle name="play" tooltip="Play" class="playControlClickable controlToggle" style="background-image: url(&apos;project://database/Packages/voxell.kinematicax/Editor/Images/d_Play.png?fileID=2800000&amp;guid=50915f1ec5a4ae74e9f7348980d0f166&amp;type=3#d_Play&apos;);" />
-    <ui:Button name="nextFrame" tooltip="Next Frame" class="playControlClickable controlButton" style="background-image: url(&apos;project://database/Packages/voxell.kinematicax/Editor/Images/d_Skip.png?fileID=2800000&amp;guid=64072a76bdd6ab04583ce080fbc4df1f&amp;type=3#d_Skip&apos;);" />
-    <ui:Button name="lastFrame" tooltip="Last Frame" class="playControlClickable controlButton" style="background-image: url(&apos;project://database/Packages/voxell.kinematicax/Editor/Images/d_LastFrame.png?fileID=2800000&amp;guid=a009bd402637d214da6b83938ac964ff&amp;type=3#d_LastFrame&apos;);" />
+    <ui:Button name="firstFrame" tooltip="First Frame" class="playControlClickable controlButton" />
+    <ui:Button name="previousFrame" tooltip="Previous Frame" class="playControlClickable controlButton" />
+    <uie:ToolbarToggle name="play" tooltip="Play" class="playControlClickable controlToggle" />
+    <ui:Button name="nextFrame" tooltip="Next Frame" class="playControlClickable controlButton" />
+    <ui:Button name="lastFrame" tooltip="Last Frame" class="playControlClickable controlButton" />
 </ui:UXML>

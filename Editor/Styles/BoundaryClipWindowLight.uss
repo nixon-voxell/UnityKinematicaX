@@ -15,7 +15,7 @@
 }
 
 .revertIcon {
-    background-image : url("/Packages/com.unity.kinematica/Editor/Images/Revert.png");
+    background-image : url("/Packages/voxell.kinematicax/Editor/Images/Revert.png");
 }
 
 .toggleItem--checked {

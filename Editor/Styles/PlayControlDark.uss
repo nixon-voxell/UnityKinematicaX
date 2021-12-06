@@ -8,21 +8,21 @@
 }
 
 #firstFrame {
-    background-image : url("/Packages/com.unity.kinematica/Editor/Images/d_FirstFrame.png");
+    background-image : url("/Packages/voxell.kinematicax/Editor/Images/d_FirstFrame.png");
 }
 
 #previousFrame {
-    background-image : url("/Packages/com.unity.kinematica/Editor/Images/d_SkipBack.png");
+    background-image : url("/Packages/voxell.kinematicax/Editor/Images/d_SkipBack.png");
 }
 
 #play {
-    background-image : url("/Packages/com.unity.kinematica/Editor/Images/d_Play.png");
+    background-image : url("/Packages/voxell.kinematicax/Editor/Images/d_Play.png");
 }
 
 #nextFrame {
-    background-image : url("/Packages/com.unity.kinematica/Editor/Images/d_Skip.png");
+    background-image : url("/Packages/voxell.kinematicax/Editor/Images/d_Skip.png");
 }
 
 #lastFrame {
-    background-image : url("/Packages/com.unity.kinematica/Editor/Images/d_LastFrame.png");
+    background-image : url("/Packages/voxell.kinematicax/Editor/Images/d_LastFrame.png");
 }
