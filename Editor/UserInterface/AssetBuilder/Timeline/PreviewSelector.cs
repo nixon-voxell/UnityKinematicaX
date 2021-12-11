@@ -26,27 +26,6 @@ namespace Unity.Kinematica.Editor
             UIElementsUtils.ApplyStyleSheet("PreviewSelector.uss", this);
             AddToClassList("previewSelector");
 
-            // Target Selection
-            {
-                var selectorContainer = new VisualElement();
-                selectorContainer.AddToClassList("selectorContainer");
-                var selectorClick = new Clickable(OnSelectorClicked);
-                selectorContainer.AddManipulator(selectorClick);
-
-                Label label = new Label { text = "Target" };
-                var labelClick = new Clickable(OnSelectorClicked);
-                label.AddManipulator(labelClick);
-
-                m_SelectorDropdown = new Image();
-                m_SelectorDropdown.AddToClassList("selectorDropdown");
-                m_SelectorDropdown.RegisterCallback<DragUpdatedEvent>(OnDragUpdate);
-                m_SelectorDropdown.RegisterCallback<DragPerformEvent>(OnDragPerform);
-
-                selectorContainer.Add(label);
-                selectorContainer.Add(m_SelectorDropdown);
-                Add(selectorContainer);
-            }
-
             //Target label
             {
                 m_TargetContainer = new VisualElement();
@@ -67,6 +46,22 @@ namespace Unity.Kinematica.Editor
                 m_TargetContainer.Add(gameObjectIcon);
                 m_TargetContainer.Add(m_TargetLabel);
                 Add(m_TargetContainer);
+            }
+
+            // Target Selection
+            {
+                var selectorContainer = new VisualElement();
+                selectorContainer.AddToClassList("selectorContainer");
+                var selectorClick = new Clickable(OnSelectorClicked);
+                selectorContainer.AddManipulator(selectorClick);
+
+                m_SelectorDropdown = new Image();
+                m_SelectorDropdown.AddToClassList("selectorDropdown");
+                m_SelectorDropdown.RegisterCallback<DragUpdatedEvent>(OnDragUpdate);
+                m_SelectorDropdown.RegisterCallback<DragPerformEvent>(OnDragPerform);
+
+                selectorContainer.Add(m_SelectorDropdown);
+                Add(selectorContainer);
             }
 
             RegisterCallback<DragUpdatedEvent>(OnDragUpdate);

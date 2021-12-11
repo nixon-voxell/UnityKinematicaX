@@ -1,37 +1,31 @@
-.previewSelector {
-    flex-direction: row;
-    border-right-width: 1px;
+.previewSelector
+{
+  flex-direction: row;
+  border-right-width: 1px;
+}
+.selectorContainer
+{
+  min-width: 20px;
+  flex-direction: row;
+  padding-left: 2px;
 }
 
-.previewSelector Label {
-    padding-top: 2px;
+.selectorDropdown
+{
+  min-width: 16px;
+  max-width: 16px;
 }
 
-.selectorContainer {
-    flex-direction: row;
-    padding-right: 0px;
+.targetContainer
+{
+  margin-top: 4px;
+  margin-left: 4px;
+  flex-direction: row;
 }
 
-.selectorDropdown {
-    min-width: 6px;
-    border-right-width: 1px;
-    border-left-width: 0px;
-    border-top-width: 0px;
-    border-bottom-width: 0px;
-    border-radius: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.targetContainer {
-    margin-left: 6px;
-    padding-left: 6px;
-    flex-direction: row;
-}
-
-.gameObjectIcon {
-    margin-top: 2px;
-    max-height: 16px;
-    max-width: 16px;
-    min-width: 16px;
+.gameObjectIcon
+{
+  max-height: 16px;
+  max-width: 16px;
+  min-width: 16px;
 }

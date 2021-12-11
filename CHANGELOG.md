@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - Upgraded all legacy C# scripts to work with latest `Collections`, `Burst`, and `Jobs System` package.
+- Modified Kinematica Window gameobject selector style.
 
 ## [0.8.0-preview] - 2020-07-31
 
