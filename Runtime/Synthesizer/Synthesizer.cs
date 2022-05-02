@@ -83,7 +83,7 @@ namespace Unity.Kinematica
             }
             lastProcessedFrameCount = frameCount;
 
-            Assert.IsTrue(deltaTime > 0.0f);
+            // Assert.IsTrue(deltaTime > 0.0f);
 
             _deltaTime = deltaTime;
 
